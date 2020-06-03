@@ -1,0 +1,33 @@
+{{> header}}
+<div class="container">
+    <h1>Lista de Pintores</h1>
+    {{#if estatales }}
+    <table class="table table-dark table-hover">
+        <thead>
+        <tr>
+            <td>Goya</td>
+            <th>Romanticismo</th>
+            <th>Español</th>
+            <th>https://www.google.com.mx/url?sa=i&url=http%3A%2F%2Fimgenespngymuchoms.blogspot.com%2F2012%2F09%2Ftodas-las-obras-del-genio-francisco-de.html&psig=AOvVaw2Obxw8HkuXcPQ57yZZ5rGB&ust=1591302929193000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCHtMq_5ukCFQAAAAAdAAAAABAD</th>
+           
+           
+        </tr>
+        </thead>
+        <tbody>
+        {{#each estatales }}
+        <tr>
+            <td>{{ Nombre del pintor }}</td>
+            <td>{{ Corriente }}</td>
+            <td>{{ Nacionalidad }}</td>
+            <td>{{ Pintura }}</td>
+            
+           
+        </tr>
+        {{/ each }}
+        </tbody>
+    </table>
+    {{ else }}
+    <div>No se encontraron Pintores.</div>
+    {{/if}}
+</div>
+{{> footer}}
