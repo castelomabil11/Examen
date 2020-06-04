@@ -1,33 +1,75 @@
-{{> header}}
+{{>header}}
 <div class="container">
-    <h1>Lista de Pintores</h1>
-    {{#if estatales }}
-    <table class="table table-dark table-hover">
-        <thead>
+<h1>Pintores</h1>
+{{#if pintores}}
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+           
+            <td>Nombre</td>
+            <td>Nacionalidad</td>
+            <td>Corriente</td>
+            <td>Pintura</td>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each pintores}}
         <tr>
             <td>Goya</td>
-            <th>Romanticismo</th>
-            <th>Español</th>
-            <th>https://www.google.com.mx/url?sa=i&url=http%3A%2F%2Fimgenespngymuchoms.blogspot.com%2F2012%2F09%2Ftodas-las-obras-del-genio-francisco-de.html&psig=AOvVaw2Obxw8HkuXcPQ57yZZ5rGB&ust=1591302929193000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCHtMq_5ukCFQAAAAAdAAAAABAD</th>
-           
-           
+            <td>Español</td>
+            <td>Romanticistmo</td>
+            <td><img src="/images/brujeria.jpg" ></td>
+            <td>{{pintura}}</td> 
         </tr>
-        </thead>
-        <tbody>
-        {{#each estatales }}
+        {{/each}}
+    </tbody>
+    <tbody>
+        {{#each pintores}}
         <tr>
-            <td>{{ Nombre del pintor }}</td>
-            <td>{{ Corriente }}</td>
-            <td>{{ Nacionalidad }}</td>
-            <td>{{ Pintura }}</td>
-            
-           
+            <td>Da vinci</td>
+            <td>Italiano</td>
+            <td>Renacimiento</td>
+            <td><img src="/images/gioconda.jpg" ></td>
+            <td>{{pintura}}</td> 
         </tr>
-        {{/ each }}
-        </tbody>
+        {{/each}}
+    </tbody>
+    <tbody>
+        {{#each pintores}}
+        <tr>
+            <td>Monet</td>
+            <td>Frances</td>
+            <td>Impresionismo</td>
+            <td><img src="/images/amapola.jpg" ></td>
+            <td>{{pintura}}</td> 
+        </tr>
+        {{/each}}
+    </tbody>
+    <tbody>
+        {{#each pintores}}
+        <tr>
+            <td>Dali</td>
+            <td>Pulbol</td>
+            <td>Surealismo</td>
+            <td><img src="/images/jirafa.jpg" ></td>
+            <td>{{pintura}}</td> 
+        </tr>
+        {{/each}}
+    </tbody>
+<tbody>
+        {{#each pintores}}
+        <tr>
+            <td>Rembrandt</td>
+            <td>neerlandés</td>
+            <td>Barroco</td>
+            <td><img src="/images/ronda.jpg" ></td>
+            <td>{{pintura}}</td> 
+        </tr>
+        {{/each}}
+    </tbody>
     </table>
-    {{ else }}
-    <div>No se encontraron Pintores.</div>
-    {{/if}}
+{{else}}
+<div> No se encuentran pintores</div>
+{{/if}}
 </div>
-{{> footer}}
+{{>footer}}
